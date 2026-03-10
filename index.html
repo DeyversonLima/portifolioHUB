@@ -1,79 +1,197 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PortfolioHUB + IA GEMINI - Seu Nome</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      padding: 20px;
-      line-height: 1.6;
-    }
-    h1, h2 {
-      color: #0057a3;
-    }
-    .card {
-      background-color: white;
-      border-radius: 8px;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PortfolioHUB + IA GEMINI - Deyverson Lima</title>
+
+<style>
+
+:root{
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --text: #333;
+  --title: #0057a3;
+  --accent: #0066cc;
+  --border: #e6e6e6;
+  --shadow: rgba(0,0,0,0.08);
+}
+
+body.dark{
+  --bg: #121212;
+  --card: #1e1e1e;
+  --text: #e4e4e4;
+  --title: #4da3ff;
+  --accent: #6bb3ff;
+  --border: #2b2b2b;
+  --shadow: rgba(0,0,0,0.5);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding:40px 20px;
+  line-height:1.6;
+  transition: background .3s, color .3s;
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+}
+
+header{
+  margin-bottom:30px;
+}
+
+h1{
+  color:var(--title);
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+h2{
+  color:var(--title);
+  font-size:20px;
+  margin-bottom:12px;
+}
+
+p{
+  margin-bottom:6px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:10px;
+  padding:22px;
+  margin-bottom:20px;
+  border:1px solid var(--border);
+  box-shadow:0 5px 18px var(--shadow);
+  transition: background .3s;
+}
+
+ul{
+  padding-left:18px;
+}
+
+li{
+  margin-bottom:6px;
+}
+
+a{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:500;
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+footer{
+  text-align:center;
+  margin-top:40px;
+  font-size:14px;
+  opacity:.8;
+}
+
+.theme-toggle{
+  position:fixed;
+  top:20px;
+  right:20px;
+  background:var(--card);
+  border:1px solid var(--border);
+  padding:8px 14px;
+  border-radius:30px;
+  cursor:pointer;
+  font-size:14px;
+  box-shadow:0 4px 12px var(--shadow);
+  transition: all .3s;
+}
+
+.theme-toggle:hover{
+  transform:scale(1.05);
+}
+
+</style>
 </head>
+
 <body>
 
-  <h1>🚀 PortfolioHUB + IA GEMINI</h1>
-  <p><strong>Aluno:</strong> Deyverson Guedes Lima<strong>RA:</strong> 22503721</p>
-  <p><strong>Disciplina:</strong> Bootcamp I — 2025</p>
-  <p><strong>Professor:</strong> Marcelo Carboni Gomes</p>
+<button class="theme-toggle" onclick="toggleTheme()">🌙 Modo escuro</button>
 
-  <div class="card">
-    <h2>📄 Documentação</h2>
-    <ul>
-      <li><a href="https://drive.google.com/drive/folders/1fDo3mxKGOZ0LfGKTt9FHl_ngOelHFFOp?usp=sharing" target="_blank">Plano de Implantação (Google Docs)</a></li>
-      <li><a href="https://docs.google.com/spreadsheets/d/1X8QfLVeFd_48Z4mTHZolTV5A-iOQIG9NTIwMuP5Or9M/edit?usp=sharing" target="_blank">Checklist de Testes (Google Planilhas)</a></li>
-    </ul>
-  </div>
+<div class="container">
 
-  <div class="card">
-    <h2>🔗 Integrações</h2>
-    <ul>
-      <li><a href="https://calendar.google.com" target="_blank">Google Calendar - Eventos do Projeto</a></li>
-      <li><a href="https://github.com/DeyversonGLimaKingsman/portifolioHUB" target="_blank">Repositório no GitHub</a></li>
-    </ul>
-  </div>
+<header>
+<h1>🚀 PortfolioHUB + IA GEMINI</h1>
 
-  <div class="card">
-    <h2>🎥 Apresentação em Vídeo</h2>
-    <p>
-      <a href="https://youtu.be/-Qc7kDyjcAs " target="_blank">▶️ Assista no YouTube</a>
-    </p>
-  </div>
+<p><strong>Aluno:</strong> Deyverson Guedes Lima <strong>RA:</strong> 22503721</p>
+<p><strong>Disciplina:</strong> Bootcamp I — 2025</p>
+<p><strong>Professor:</strong> Marcelo Carboni Gomes</p>
+</header>
 
-  <div class="card">
-    <h2>🧠 Uso do Google GEMINI</h2>
-    <p>Durante a implantação, utilizei o Google GEMINI como assistente para:</p>
-    <ul>
-      <li>Planejar o cronograma e tarefas</li>
-      <li>Configurar permissões e políticas de segurança</li>
-      <li>Testar integrações com Google Drive e GitHub</li>
-    </ul>
-  </div>
+<div class="card">
+<h2>📄 Documentação</h2>
+<ul>
+<li><a href="https://drive.google.com/drive/folders/1fDo3mxKGOZ0LfGKTt9FHl_ngOelHFFOp?usp=sharing" target="_blank">Plano de Implantação (Google Docs)</a></li>
+<li><a href="https://docs.google.com/spreadsheets/d/1X8QfLVeFd_48Z4mTHZolTV5A-iOQIG9NTIwMuP5Or9M/edit?usp=sharing" target="_blank">Checklist de Testes (Google Planilhas)</a></li>
+</ul>
+</div>
 
-  <footer style="text-align: center; margin-top: 40px;">
-    <p>&copy; 2025 - Projeto acadêmico UNICEUB</p>
-  </footer>
+<div class="card">
+<h2>🔗 Integrações</h2>
+<ul>
+<li><a href="https://calendar.google.com" target="_blank">Google Calendar - Eventos do Projeto</a></li>
+<li><a href="https://github.com/DeyversonGLimaKingsman/portifolioHUB" target="_blank">Repositório no GitHub</a></li>
+</ul>
+</div>
+
+<div class="card">
+<h2>🎥 Apresentação em Vídeo</h2>
+<p>
+<a href="https://youtu.be/-Qc7kDyjcAs" target="_blank">▶️ Assista no YouTube</a>
+</p>
+</div>
+
+<div class="card">
+<h2>🧠 Uso do Google GEMINI</h2>
+<p>Durante a implantação, utilizei o Google GEMINI como assistente para:</p>
+<ul>
+<li>Planejar o cronograma e tarefas</li>
+<li>Configurar permissões e políticas de segurança</li>
+<li>Testar integrações com Google Drive e GitHub</li>
+</ul>
+</div>
+
+<footer>
+<p>&copy; 2025 - Projeto acadêmico UniCEUB</p>
+</footer>
+
+</div>
+
+<script>
+
+function toggleTheme(){
+  const body = document.body
+  const button = document.querySelector(".theme-toggle")
+
+  body.classList.toggle("dark")
+
+  if(body.classList.contains("dark")){
+    button.textContent = "☀️ Modo claro"
+  } else{
+    button.textContent = "🌙 Modo escuro"
+  }
+}
+
+</script>
 
 </body>
 </html>
