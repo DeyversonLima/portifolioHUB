@@ -1,33 +1,27 @@
-# Projetos Pessoais
+# Projetos pessoais
 
-Este repositório contém projetos de interesse pessoal, experimentos e trabalhos desenvolvidos fora do ambiente acadêmico. São iniciativas que ajudam a desenvolver habilidades práticas e explorar novas tecnologias.
+Experimentos criados fora das disciplinas para praticar interface, estado no navegador e automação.
 
-## Projetos:
+## Site de portfólio histórico
 
-### 1. Site de Portfólio Pessoal
-- **Descrição**: Um site criado para exibir meu portfólio pessoal. Utiliza HTML, CSS, JavaScript e GitHub Pages.
-- **Tecnologias usadas**: HTML5, CSS3, JavaScript, GitHub Pages
-- **Link do projeto**: [Portfolio Online](https://github.com/DeyversonGLimaKingsman/portifolioHUB)
+Primeira versão estática do portfólio, preservada para comparação com a versão atual.
 
-### 2. Aplicação de To-Do List
-- **Descrição**: Uma aplicação simples de lista de tarefas, onde o usuário pode adicionar, editar e excluir tarefas.
-- **Tecnologias usadas**: HTML, CSS, JavaScript, LocalStorage
-- **Link do projeto**: [To-Do List](https://github.com/DeyversonGLimaKingsman/to-do-list)
+- Tecnologias: HTML, CSS e JavaScript
+- [Abrir versão histórica](site-portifolio/index.html)
+- [Abrir portfólio atual](https://deyversonlima.github.io/)
 
-### 3. Bot de Telegram
-- **Descrição**: Bot para interagir com usuários no Telegram, fornecendo informações como previsão do tempo e cotação de moedas.
-- **Tecnologias usadas**: Python, API do Telegram, Requests
-- **Link do projeto**: [Telegram Bot](https://github.com/DeyversonGLimaKingsman/telegram-bot)
+## Todo list
 
-## 📚 Documentação
+Lista de tarefas com adição, remoção, teclado e persistência em `localStorage`.
 
-- **Como rodar o projeto**: 
-  1. Clone o repositório.
-  2. Instale as dependências (caso haja).
-  3. Rode o projeto localmente.
+- Tecnologias: HTML, CSS e JavaScript
+- [Abrir demonstração](todo-list/index.html)
 
-- **Contribuições**: Sinta-se à vontade para contribuir com melhorias ou sugerir novas funcionalidades.
+## Telegram bot
 
-## 🔗 Conexão com o LinkedIn
+Bot de eco em Python com comandos `/start` e `/help`. O token é lido de variável de ambiente e nunca deve ser versionado.
 
-Acesse meu perfil profissional: [LinkedIn](https://www.linkedin.com/in/deyverson-guedes-lima-956096365)
+- Tecnologias: Python e `python-telegram-bot`
+- [Ler instruções](telegram-bot/README.md)
+
+Esses projetos são educacionais. Sugestões e correções podem ser enviadas pelo [repositório principal](https://github.com/DeyversonLima/portifolioHUB).

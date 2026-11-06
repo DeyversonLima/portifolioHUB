@@ -1,78 +1,76 @@
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f5f7f9;
-    font-family: "Segoe UI", Arial, sans-serif;
+const display = document.getElementById('display')
+
+function appendToDisplay(value) {
+  if (display.value === 'Erro') display.value = ''
+  display.value += value
 }
 
-h1{
-    color: #444;
-    font-weight: 500;
+function clearDisplay() {
+  display.value = ''
 }
 
-.calculator {
-    background-color: #ffffff;
-    border-radius: 14px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    padding: 22px;
-    width: 300px;
+function back() {
+  display.value = display.value.slice(0, -1)
 }
 
-#display {
-    width: 100%;
-    height: 55px;
-    font-size: 24px;
-    text-align: right;
-    border: none;
-    border-radius: 8px;
-    padding: 8px;
-    margin-bottom: 12px;
-    background-color: #f1f3f5;
-    box-sizing: border-box;
-    color: #333;
+function applyOperation(values, operators) {
+  const right = values.pop()
+  const left = values.pop()
+  const operator = operators.pop()
+
+  if (left === undefined || right === undefined) throw new Error('Expressão inválida')
+  if (operator === '+') values.push(left + right)
+  if (operator === '-') values.push(left - right)
+  if (operator === '*') values.push(left * right)
+  if (operator === '/') {
+    if (right === 0) throw new Error('Divisão por zero')
+    values.push(left / right)
+  }
 }
 
-.box-buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 10px;
+function evaluateExpression(expression) {
+  const tokens = expression.match(/\d+(?:\.\d+)?|[+\-*/]/g) || []
+  if (!expression || tokens.join('') !== expression) throw new Error('Expressão inválida')
+
+  const values = []
+  const operators = []
+  const precedence = { '+': 1, '-': 1, '*': 2, '/': 2 }
+
+  tokens.forEach((token, index) => {
+    if (index % 2 === 0) {
+      const value = Number(token)
+      if (!Number.isFinite(value)) throw new Error('Número inválido')
+      values.push(value)
+      return
+    }
+
+    while (operators.length && precedence[operators.at(-1)] >= precedence[token]) {
+      applyOperation(values, operators)
+    }
+    operators.push(token)
+  })
+
+  while (operators.length) applyOperation(values, operators)
+  if (values.length !== 1) throw new Error('Expressão inválida')
+  return values[0]
 }
 
-button {
-    height: 60px;
-    font-size: 18px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    background-color: #e9ecef;
-    color: #333;
-    transition: all 0.2s ease;
+function calculate() {
+  try {
+    display.value = String(evaluateExpression(display.value))
+  } catch {
+    display.value = 'Erro'
+  }
 }
 
-button:hover {
-    background-color: #dfe3e7;
-}
+document.addEventListener('keydown', (event) => {
+  if (/^[0-9.+\-*/]$/.test(event.key)) appendToDisplay(event.key)
+  if (event.key === 'Enter' || event.key === '=') calculate()
+  if (event.key === 'Backspace') back()
+  if (event.key === 'Escape') clearDisplay()
+})
 
-button:active {
-    transform: scale(0.96);
-}
-
-.btn-zero{
-    grid-column: 1 / 3;
-}
-
-.btn-result{
-    grid-row: 4 / 6;
-    grid-column: 4;
-    height: 100%;
-    background-color: #7aa7ff;
-    color: white;
-}
-
-.btn-result:hover{
-    background-color: #5f95ff;
-}
+window.appendToDisplay = appendToDisplay
+window.clearDisplay = clearDisplay
+window.back = back
+window.calculate = calculate

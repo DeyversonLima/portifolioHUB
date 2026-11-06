@@ -1,197 +1,147 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PortfolioHUB + IA GEMINI - Deyverson Lima</title>
-
-<style>
-
-:root{
-  --bg: #f6f8fb;
-  --card: #ffffff;
-  --text: #333;
-  --title: #0057a3;
-  --accent: #0066cc;
-  --border: #e6e6e6;
-  --shadow: rgba(0,0,0,0.08);
-}
-
-body.dark{
-  --bg: #121212;
-  --card: #1e1e1e;
-  --text: #e4e4e4;
-  --title: #4da3ff;
-  --accent: #6bb3ff;
-  --border: #2b2b2b;
-  --shadow: rgba(0,0,0,0.5);
-}
-
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-body{
-  font-family: "Segoe UI", system-ui, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  padding:40px 20px;
-  line-height:1.6;
-  transition: background .3s, color .3s;
-}
-
-.container{
-  max-width:900px;
-  margin:auto;
-}
-
-header{
-  margin-bottom:30px;
-}
-
-h1{
-  color:var(--title);
-  font-size:32px;
-  margin-bottom:10px;
-}
-
-h2{
-  color:var(--title);
-  font-size:20px;
-  margin-bottom:12px;
-}
-
-p{
-  margin-bottom:6px;
-}
-
-.card{
-  background:var(--card);
-  border-radius:10px;
-  padding:22px;
-  margin-bottom:20px;
-  border:1px solid var(--border);
-  box-shadow:0 5px 18px var(--shadow);
-  transition: background .3s;
-}
-
-ul{
-  padding-left:18px;
-}
-
-li{
-  margin-bottom:6px;
-}
-
-a{
-  color:var(--accent);
-  text-decoration:none;
-  font-weight:500;
-}
-
-a:hover{
-  text-decoration:underline;
-}
-
-footer{
-  text-align:center;
-  margin-top:40px;
-  font-size:14px;
-  opacity:.8;
-}
-
-.theme-toggle{
-  position:fixed;
-  top:20px;
-  right:20px;
-  background:var(--card);
-  border:1px solid var(--border);
-  padding:8px 14px;
-  border-radius:30px;
-  cursor:pointer;
-  font-size:14px;
-  box-shadow:0 4px 12px var(--shadow);
-  transition: all .3s;
-}
-
-.theme-toggle:hover{
-  transform:scale(1.05);
-}
-
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hub de projetos acadêmicos e experimentos de Deyverson Lima.">
+  <title>PortifolioHUB | Projetos de Deyverson Lima</title>
+  <link rel="stylesheet" href="assets/css/hub.css">
+  <script>
+    document.documentElement.dataset.theme = localStorage.getItem('hub-theme') || 'dark'
+  </script>
 </head>
-
 <body>
+  <a class="skip-link" href="#projetos">Ir para os projetos</a>
 
-<button class="theme-toggle" onclick="toggleTheme()">🌙 Modo escuro</button>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="PortifolioHUB, início">
+      <span aria-hidden="true">~/</span>portifolioHUB
+    </a>
+    <nav aria-label="Navegação principal">
+      <a href="#projetos">Projetos</a>
+      <a href="#documentacao">Documentação</a>
+      <a href="https://deyversonlima.github.io">Site pessoal</a>
+      <button id="theme-toggle" class="icon-button" type="button" aria-label="Alternar tema">◐</button>
+    </nav>
+  </header>
 
-<div class="container">
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow">Arquivo acadêmico + laboratório pessoal</p>
+        <h1 id="hero-title">Projetos pequenos, aprendizados que ficam.</h1>
+        <p class="hero-copy">Este repositório reúne exercícios, protótipos e documentação produzidos durante minha formação em Engenharia de Software. Cada item preserva o contexto em que foi criado e mostra uma etapa do meu aprendizado.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projetos">Explorar projetos</a>
+          <a class="button" href="https://github.com/DeyversonLima/portifolioHUB">Ver repositório</a>
+        </div>
+      </div>
+      <div class="terminal" role="img" aria-label="Resumo do repositório">
+        <div class="terminal-bar"><span></span><span></span><span></span></div>
+        <pre><code><span class="prompt">$</span> tree --depth 2
+.
+├── projetos-academicos
+│   ├── web
+│   ├── sql
+│   └── modelagem
+├── projetos-pessoais
+│   ├── interfaces
+│   └── automações
+└── documentacao
 
-<header>
-<h1>🚀 PortfolioHUB + IA GEMINI</h1>
+<span class="ok">status: aprendendo continuamente</span></code></pre>
+      </div>
+    </section>
 
-<p><strong>Aluno:</strong> Deyverson Guedes Lima <strong>RA:</strong> 22503721</p>
-<p><strong>Disciplina:</strong> Bootcamp I — 2025</p>
-<p><strong>Professor:</strong> Marcelo Carboni Gomes</p>
-</header>
+    <section class="stats" aria-label="Resumo">
+      <div><strong>6</strong><span>projetos indexados</span></div>
+      <div><strong>3</strong><span>áreas: web, dados e automação</span></div>
+      <div><strong>2025–26</strong><span>registro da evolução</span></div>
+    </section>
 
-<div class="card">
-<h2>📄 Documentação</h2>
-<ul>
-<li><a href="https://drive.google.com/drive/folders/1fDo3mxKGOZ0LfGKTt9FHl_ngOelHFFOp?usp=sharing" target="_blank">Plano de Implantação (Google Docs)</a></li>
-<li><a href="https://docs.google.com/spreadsheets/d/1X8QfLVeFd_48Z4mTHZolTV5A-iOQIG9NTIwMuP5Or9M/edit?usp=sharing" target="_blank">Checklist de Testes (Google Planilhas)</a></li>
-</ul>
-</div>
+    <section id="projetos" class="section" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Índice do laboratório</p>
+          <h2 id="projects-title">Projetos</h2>
+        </div>
+        <label class="search">
+          <span>Buscar</span>
+          <input id="project-search" type="search" placeholder="Ex.: JavaScript, SQL..." autocomplete="off">
+        </label>
+      </div>
 
-<div class="card">
-<h2>🔗 Integrações</h2>
-<ul>
-<li><a href="https://calendar.google.com" target="_blank">Google Calendar - Eventos do Projeto</a></li>
-<li><a href="https://github.com/DeyversonGLimaKingsman/portifolioHUB" target="_blank">Repositório no GitHub</a></li>
-</ul>
-</div>
+      <p id="search-status" class="search-status" aria-live="polite"></p>
+      <div class="project-grid" id="project-grid">
+        <article class="project-card" data-search="calculadora javascript html css acadêmico">
+          <div class="card-top"><span class="number">01</span><span class="status ready">Executável</span></div>
+          <h3>Calculadora web</h3>
+          <p>Operações básicas, teclado e parser de expressões sem dependências.</p>
+          <ul class="tags"><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
+          <a href="projetos-academicos/calculadora-web/index.html">Abrir demonstração <span>↗</span></a>
+        </article>
 
-<div class="card">
-<h2>🎥 Apresentação em Vídeo</h2>
-<p>
-<a href="https://youtu.be/-Qc7kDyjcAs" target="_blank">▶️ Assista no YouTube</a>
-</p>
-</div>
+        <article class="project-card" data-search="todo lista tarefas javascript pessoal">
+          <div class="card-top"><span class="number">02</span><span class="status ready">Executável</span></div>
+          <h3>Todo list</h3>
+          <p>Lista de tarefas para praticar eventos, manipulação do DOM e estado local.</p>
+          <ul class="tags"><li>JavaScript</li><li>DOM</li></ul>
+          <a href="projetos-pessoais/todo-list/index.html">Abrir demonstração <span>↗</span></a>
+        </article>
 
-<div class="card">
-<h2>🧠 Uso do Google GEMINI</h2>
-<p>Durante a implantação, utilizei o Google GEMINI como assistente para:</p>
-<ul>
-<li>Planejar o cronograma e tarefas</li>
-<li>Configurar permissões e políticas de segurança</li>
-<li>Testar integrações com Google Drive e GitHub</li>
-</ul>
-</div>
+        <article class="project-card" data-search="estoque banco dados sql acadêmico">
+          <div class="card-top"><span class="number">03</span><span class="status study">Estudo</span></div>
+          <h3>Controle de estoque</h3>
+          <p>Interface e modelo SQL para explorar cadastro, movimentação e consistência de dados.</p>
+          <ul class="tags"><li>SQL</li><li>JavaScript</li></ul>
+          <a href="projetos-academicos/controle-estoque/index.html">Abrir projeto <span>↗</span></a>
+        </article>
 
-<footer>
-<p>&copy; 2025 - Projeto acadêmico UniCEUB</p>
-</footer>
+        <article class="project-card" data-search="login autenticação formulário acadêmico">
+          <div class="card-top"><span class="number">04</span><span class="status study">Protótipo</span></div>
+          <h3>Sistema de login</h3>
+          <p>Protótipo de formulário criado para estudar validação e feedback de interface.</p>
+          <ul class="tags"><li>Forms</li><li>UX</li></ul>
+          <a href="projetos-academicos/sistema-login/index.html">Abrir projeto <span>↗</span></a>
+        </article>
 
-</div>
+        <article class="project-card" data-search="sql consultas tabelas experimento acadêmico">
+          <div class="card-top"><span class="number">05</span><span class="status code">Código</span></div>
+          <h3>Experimento SQL</h3>
+          <p>Scripts de criação, inserção e consulta para fundamentos de banco relacional.</p>
+          <ul class="tags"><li>SQL</li><li>Dados</li></ul>
+          <a href="projetos-academicos/experimento-sql/consultas.sql">Ler consultas <span>↗</span></a>
+        </article>
 
-<script>
+        <article class="project-card" data-search="telegram bot python automação pessoal">
+          <div class="card-top"><span class="number">06</span><span class="status code">Código</span></div>
+          <h3>Telegram bot</h3>
+          <p>Experimento de automação em Python documentado para execução com token local.</p>
+          <ul class="tags"><li>Python</li><li>Bot</li></ul>
+          <a href="projetos-pessoais/telegram-bot/README.md">Ler documentação <span>↗</span></a>
+        </article>
+      </div>
+    </section>
 
-function toggleTheme(){
-  const body = document.body
-  const button = document.querySelector(".theme-toggle")
+    <section id="documentacao" class="section documentation" aria-labelledby="docs-title">
+      <div>
+        <p class="eyebrow">Além do código</p>
+        <h2 id="docs-title">Documentação e processo</h2>
+        <p>O hub também guarda cronogramas, relatórios e um guia introdutório de Git. Esses registros ajudam a mostrar não só o resultado, mas como o trabalho foi organizado.</p>
+      </div>
+      <div class="doc-links">
+        <a href="documentacao/README.md"><span>README da documentação</span><strong>01</strong></a>
+        <a href="documentacao/guia-git-basico.md"><span>Guia básico de Git</span><strong>02</strong></a>
+        <a href="documentacao/ideias-futuras.md"><span>Ideias futuras</span><strong>03</strong></a>
+      </div>
+    </section>
+  </main>
 
-  body.classList.toggle("dark")
+  <footer>
+    <p>Um arquivo vivo de estudos de <a href="https://github.com/DeyversonLima">Deyverson Lima</a>.</p>
+    <a href="#top">Voltar ao topo ↑</a>
+  </footer>
 
-  if(body.classList.contains("dark")){
-    button.textContent = "☀️ Modo claro"
-  } else{
-    button.textContent = "🌙 Modo escuro"
-  }
-}
-
-</script>
-
+  <script src="assets/js/hub.js"></script>
 </body>
 </html>

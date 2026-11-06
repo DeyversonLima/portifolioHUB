@@ -9,11 +9,13 @@
 <body>
     <div class="todo-container">
         <h1>Minha To-Do List</h1>
-        <input type="text" id="new-task" placeholder="Adicionar nova tarefa...">
-        <button id="add-task">Adicionar</button>
-        <ul id="task-list"></ul>
+        <label for="new-task">Nova tarefa</label>
+        <input type="text" id="new-task" placeholder="Adicionar nova tarefa..." maxlength="120">
+        <button type="button" id="add-task">Adicionar</button>
+        <p id="task-status" aria-live="polite"></p>
+        <ul id="task-list" aria-label="Tarefas"></ul>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>

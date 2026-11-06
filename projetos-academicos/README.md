@@ -1,44 +1,16 @@
-# Projetos Acadêmicos
+# Projetos acadêmicos
 
-Este diretório contém os projetos realizados durante o curso de Engenharia de Software. Cada projeto foi desenvolvido para aprender, aplicar e consolidar os conceitos estudados ao longo das disciplinas.
+Exercícios desenvolvidos durante a graduação em Engenharia de Software. O objetivo é registrar a evolução em interface, programação e banco de dados sem apresentar protótipos como sistemas de produção.
 
-## 🚀 Projetos
+| Projeto | Objetivo | Tecnologias | Estado |
+| --- | --- | --- | --- |
+| [Calculadora web](calculadora-web/) | DOM, eventos, teclado e operações matemáticas | HTML, CSS, JavaScript | executável |
+| [Sistema de login](sistema-login/) | validação e feedback de formulário no navegador | HTML, CSS, JavaScript | protótipo visual |
+| [Experimento SQL](experimento-sql/) | criação, inserção e consultas relacionais | SQL | scripts de estudo |
+| [Controle de estoque](controle-estoque/) | interface de CRUD e modelo de dados | HTML, CSS, JavaScript, SQL | protótipo |
 
-### 1. Calculadora Web
-   - **Descrição**: Uma calculadora simples utilizando HTML, CSS e JavaScript.
-   - **Objetivo**: Aplicar conceitos de manipulação de DOM e eventos em JavaScript.
-   - **Tecnologias Usadas**: HTML, CSS, JavaScript
-   - **Status**: Concluído
-   - **Link para o projeto**: [Calculadora Web](projetos-academicos/calculadora-web/)
+## Avisos de escopo
 
-### 2. Sistema de Login em HTML/CSS/JS
-   - **Descrição**: Sistema de login simples com validação de formulário.
-   - **Objetivo**: Aprender sobre autenticação básica em aplicações web e validação de dados.
-   - **Tecnologias Usadas**: HTML, CSS, JavaScript
-   - **Status**: Concluído
-   - **Link para o projeto**: [Sistema de Login](projetos-academicos/sistema-login/)
+O sistema de login compara credenciais demonstrativas no próprio JavaScript; portanto, não implementa autenticação segura. O controle de estoque mantém front-end e scripts SQL no mesmo diretório, mas não possui uma API que os conecte. Esses limites são intencionais e estão registrados para orientar melhorias futuras.
 
-### 3. Experimentos com Banco de Dados (SQL)
-   - **Descrição**: Experimentos com SQL, criando e manipulando tabelas e realizando consultas.
-   - **Objetivo**: Aplicar conceitos de banco de dados relacionais.
-   - **Tecnologias Usadas**: MySQL
-   - **Status**: Concluído
-   - **Link para o projeto**: [Experimentos Banco de Dados](projetos-academicos/experimento-sql/)
-
-### 4. Aplicação de Controle de Estoque (Em Andamento)
-   - **Descrição**: Sistema de controle de estoque com CRUD (Create, Read, Update, Delete).
-   - **Objetivo**: Aplicar conceitos de CRUD e integração com banco de dados.
-   - **Tecnologias Usadas**: HTML, CSS, JavaScript, MySQL
-   - **Status**: Em andamento
-   - **Link para o projeto**: [Controle de Estoque](projetos-academicos/controle-estoque/)
-
-
-## 📄 Documentação dos Projetos
-
-Cada um desses projetos possui sua documentação técnica e o código-fonte está disponível para consulta e execução. Sinta-se à vontade para explorar e sugerir melhorias!
-
-
-## 🔗 Links Úteis
-
-- **GitHub**: [Repositório Principal](https://github.com/DeyversonGLimaKingsman/portifolioHUB)
-- **LinkedIn**: [Deyverson Guedes Lima](https://www.linkedin.com/in/deyverson-guedes-lima-956096365)
+Volte ao [hub principal](../) ou visite o [perfil de Deyverson Lima](https://github.com/DeyversonLima).
