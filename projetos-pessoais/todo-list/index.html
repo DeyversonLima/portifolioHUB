@@ -12,6 +12,11 @@
         <label for="new-task">Nova tarefa</label>
         <input type="text" id="new-task" placeholder="Adicionar nova tarefa..." maxlength="120">
         <button type="button" id="add-task">Adicionar</button>
+        <div class="filters" role="group" aria-label="Filtrar tarefas">
+            <button type="button" data-filter="all" aria-pressed="true">Todas</button>
+            <button type="button" data-filter="pending" aria-pressed="false">Pendentes</button>
+            <button type="button" data-filter="completed" aria-pressed="false">Concluídas</button>
+        </div>
         <p id="task-status" aria-live="polite"></p>
         <ul id="task-list" aria-label="Tarefas"></ul>
     </div>

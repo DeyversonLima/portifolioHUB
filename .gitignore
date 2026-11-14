@@ -1,0 +1,9 @@
+node_modules/
+.eslintcache
+coverage/
+test-results/
+playwright-report/
+.DS_Store
+Thumbs.db
+certificados-privados/
+*.local

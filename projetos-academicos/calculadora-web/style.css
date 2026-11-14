@@ -9,7 +9,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
     background-color: #f4f4f4;
 }
 
@@ -33,11 +36,15 @@ body {
     background-color: #f9f9f9;
 }
 
-.buttons {
+.box-buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
+
+.btn-zero { grid-column: span 2; }
+.btn-result { background: #176b45; color: white; }
+button:focus-visible { outline: 3px solid #176b45; outline-offset: 2px; }
 
 button {
     padding: 20px;

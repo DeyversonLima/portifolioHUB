@@ -1,5 +1,7 @@
 # Ideias Futuras
 
+> Documento histórico de 2025. Algumas ideias foram realizadas ou substituídas. Consulte [roadmap.md](roadmap.md) para o planejamento atual.
+
 Este arquivo contém uma lista de ideias e projetos que planejo desenvolver ou explorar no futuro, tanto no contexto acadêmico quanto pessoal. Estas ideias servem como um guia para direcionar minha aprendizagem, bem como fornecer um portfólio em constante evolução.
 
 ## 🚀 Projetos Técnicos

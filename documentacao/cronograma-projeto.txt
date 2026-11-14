@@ -1,3 +1,6 @@
+ARQUIVO HISTÓRICO - planejamento inicial de maio de 2025.
+O estado atual está documentado em roadmap.md e no CHANGELOG da raiz.
+
 Cronograma do Projeto: Portfólio HUB
 
 Objetivo: Desenvolver um portfólio digital com todos os projetos acadêmicos e pessoais organizados, documentados e versionados usando Git e GitHub.
