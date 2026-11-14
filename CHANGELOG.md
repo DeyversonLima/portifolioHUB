@@ -2,6 +2,13 @@
 
 O projeto segue [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
+## [1.0.1] - 2026-11-14
+
+### Corrigido
+
+- pequeno estouro horizontal no viewport mobile do Chromium/Linux;
+- proteção estrutural para itens flex e grid com conteúdo maior que a coluna.
+
 ## [1.0.0] - 2026-11-14
 
 ### Adicionado

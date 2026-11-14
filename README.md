@@ -1,7 +1,7 @@
 # Portfólio HUB
 
 [![CI](https://github.com/DeyversonLima/portifolioHUB/actions/workflows/ci.yml/badge.svg)](https://github.com/DeyversonLima/portifolioHUB/actions/workflows/ci.yml)
-[![Version](https://img.shields.io/badge/version-1.0.0-35D58A)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.0.1-35D58A)](CHANGELOG.md)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-online-35D58A?logo=github)](https://deyversonlima.github.io/portifolioHUB/)
 
 Catálogo profissional e pesquisável de projetos, formações, certificações e registros de aprendizagem de Deyverson Lima em Engenharia de Software.
@@ -110,7 +110,7 @@ Consulte [SECURITY.md](SECURITY.md). Não abra uma issue pública contendo token
 
 ## Versionamento
 
-O projeto segue SemVer. A versão `1.0.0` representa a primeira edição profissional do Hub orientada por dados. Consulte [CHANGELOG.md](CHANGELOG.md).
+O projeto segue SemVer. A versão `1.0.0` representa a primeira edição profissional do Hub orientada por dados; a `1.0.1` corrige compatibilidade responsiva entre navegadores. Consulte [CHANGELOG.md](CHANGELOG.md).
 
 ## Licença
 
