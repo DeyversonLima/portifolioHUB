@@ -46,5 +46,5 @@ test('menu móvel abre, fecha com Escape e não causa rolagem horizontal', async
       .slice(0, 12)
     return { viewport, content: document.documentElement.scrollWidth, offenders }
   })
-  expect(dimensions.content, JSON.stringify(dimensions.offenders)).toBeLessThanOrEqual(dimensions.viewport)
+  expect(dimensions.offenders, `viewport=${dimensions.viewport}; scrollWidth=${dimensions.content}`).toEqual([])
 })
