@@ -19,6 +19,7 @@
   --radius-lg: 1.4rem;
   --content: 1200px;
   --header-height: 4.75rem;
+  --header-bg: rgb(7 16 14 / 96%);
 }
 
 :root[data-theme="light"] {
@@ -37,4 +38,5 @@
   --warning: #9c4c00;
   --danger: #a52828;
   --shadow: 0 24px 70px rgb(23 50 40 / 12%);
+  --header-bg: rgb(244 248 245 / 97%);
 }

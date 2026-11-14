@@ -1,10 +1,11 @@
 import { loadData } from './data.js'
 import { setupCertificateFilters, setupProjectFilters } from './filters.js'
-import { setupNavigation, setupTheme } from './navigation.js'
+import { setupNavigation, setupReveal, setupScrollExperience, setupTheme } from './navigation.js'
 import { renderArchive, renderError, renderFeatured, renderSkills, renderTimeline } from './render.js'
 
 setupTheme()
 setupNavigation()
+setupScrollExperience()
 document.querySelector('[data-current-year]').textContent = String(new Date().getFullYear())
 
 try {
@@ -17,6 +18,7 @@ try {
   renderArchive(data.archive, document.querySelector('[data-archive-grid]'))
   setupProjectFilters(data.projects)
   setupCertificateFilters(data.certifications)
+  setupReveal()
 } catch (error) {
   renderError(document.querySelector('[data-featured-projects]'), 'Use um servidor local para acessar o catálogo. Consulte o README.')
   console.error(error)

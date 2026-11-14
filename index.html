@@ -28,6 +28,7 @@
   <title>Portfólio HUB | Deyverson Lima</title>
 </head>
 <body>
+  <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
   <header class="site-header" data-header>
     <a class="brand" href="#inicio" aria-label="Portfólio HUB, início">
@@ -38,8 +39,8 @@
       <span></span><span></span><span></span>
     </button>
     <nav id="main-nav" class="main-nav" aria-label="Navegação principal" data-menu>
-      <a href="#projetos">Projetos</a><a href="#competencias">Competências</a><a href="#formacao">Formação</a><a href="#trajetoria">Trajetória</a><a href="#arquivo">Arquivo</a>
-      <a href="https://deyversonlima.github.io/">Site profissional</a>
+      <a href="#inicio" data-section-link>Início</a><a href="#projetos" data-section-link>Projetos</a><a href="#competencias" data-section-link>Competências</a><a href="#formacao" data-section-link>Formação</a><a href="#trajetoria" data-section-link>Trajetória</a><a href="#arquivo" data-section-link>Arquivo</a>
+      <a class="portfolio-link" href="https://deyversonlima.github.io/">Portfólio <span aria-hidden="true">↗</span></a>
       <button class="icon-button theme-toggle" type="button" aria-label="Usar tema claro" aria-pressed="false" data-theme-toggle><span aria-hidden="true" data-theme-icon>◐</span></button>
     </nav>
   </header>
@@ -47,6 +48,7 @@
   <main id="conteudo">
     <section id="inicio" class="hero section-shell" aria-labelledby="hero-title">
       <div class="hero-copy-block">
+        <p class="availability"><span aria-hidden="true"></span> Hub atualizado e em evolução</p>
         <p class="eyebrow"><span></span> Engenharia de Software • projetos verificáveis</p>
         <h1 id="hero-title">Aprendizado convertido em <em>software funcional.</em></h1>
         <p class="lead">Sou Deyverson Lima. Este hub organiza projetos, estudos e formações que documentam minha evolução em desenvolvimento web, dados, cloud e cibersegurança.</p>
@@ -73,6 +75,8 @@
         <div class="signal-footer"><span>Brasília, Brasil</span><span>Atualizado em 2026</span></div>
       </aside>
     </section>
+
+    <div class="tech-marquee" aria-hidden="true"><div class="marquee-track"><div class="marquee-group"><span>JAVASCRIPT</span><i>◆</i><span>PYTHON</span><i>◆</i><span>REACT</span><i>◆</i><span>PHP</span><i>◆</i><span>SQL</span><i>◆</i><span>CLOUD</span><i>◆</i><span>CIBERSEGURANÇA</span><i>◆</i></div><div class="marquee-group"><span>JAVASCRIPT</span><i>◆</i><span>PYTHON</span><i>◆</i><span>REACT</span><i>◆</i><span>PHP</span><i>◆</i><span>SQL</span><i>◆</i><span>CLOUD</span><i>◆</i><span>CIBERSEGURANÇA</span><i>◆</i></div></div></div>
 
     <section id="projetos" class="section-shell section-block" aria-labelledby="projects-title">
       <div class="section-heading"><div><p class="eyebrow"><span></span> Trabalho aplicado</p><h2 id="projects-title">Projetos em evidência</h2></div><p>Produtos, laboratórios e projetos acadêmicos apresentados com contexto, escopo e links verificáveis.</p></div>
@@ -119,10 +123,12 @@
     <section class="cta-section section-shell" aria-labelledby="cta-title"><p class="eyebrow"><span></span> Continuar explorando</p><h2 id="cta-title">Código, contexto e evolução em um só lugar.</h2><div class="hero-actions"><a class="button primary" href="https://github.com/DeyversonLima">Abrir GitHub</a><a class="button ghost" href="https://deyversonlima.github.io/">Conhecer perfil profissional</a></div></section>
   </main>
 
+  <button class="back-to-top" type="button" aria-label="Voltar ao topo" title="Voltar ao topo" data-back-to-top><span aria-hidden="true">↑</span></button>
+
   <footer class="site-footer"><div class="section-shell footer-grid">
     <div><a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true">DL</span><span><strong>Portfólio</strong><small>HUB</small></span></a><p>Arquivo vivo de projetos, estudos e formação de Deyverson Lima.</p></div>
     <nav aria-label="Links do rodapé"><a href="#projetos">Projetos</a><a href="#formacao">Formação</a><a href="README.md">Documentação</a><a href="SECURITY.md">Segurança</a></nav>
-    <div class="footer-meta"><span>Versão 1.0.1</span><span>© <span data-current-year></span> Deyverson Lima</span><a href="#inicio">Voltar ao topo ↑</a></div>
+    <div class="footer-meta"><span>Versão 1.1.0</span><span>© <span data-current-year></span> Deyverson Lima</span><a href="#inicio">Voltar ao topo ↑</a></div>
   </div></footer>
   <noscript><div class="noscript">Ative o JavaScript para carregar o catálogo pesquisável. Os repositórios continuam disponíveis no <a href="https://github.com/DeyversonLima">GitHub</a>.</div></noscript>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Deyverson Lima","url":"https://deyversonlima.github.io/","sameAs":["https://github.com/DeyversonLima"],"knowsAbout":["Engenharia de Software","Desenvolvimento Web","Dados","Cloud","Cibersegurança"]}</script>
