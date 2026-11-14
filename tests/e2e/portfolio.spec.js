@@ -34,6 +34,17 @@ test('menu móvel abre, fecha com Escape e não causa rolagem horizontal', async
   await expect(page.locator('[data-menu]')).toHaveClass(/open/)
   await page.keyboard.press('Escape')
   await expect(page.locator('[data-menu]')).not.toHaveClass(/open/)
-  const dimensions = await page.evaluate(() => ({ viewport: document.documentElement.clientWidth, content: document.documentElement.scrollWidth }))
-  expect(dimensions.content).toBeLessThanOrEqual(dimensions.viewport)
+  const dimensions = await page.evaluate(() => {
+    const viewport = document.documentElement.clientWidth
+    const offenders = [...document.querySelectorAll('body *')]
+      .map((element) => ({
+        element: `${element.tagName.toLowerCase()}${element.id ? `#${element.id}` : ''}${[...element.classList].map((item) => `.${item}`).join('')}`,
+        left: Math.round(element.getBoundingClientRect().left),
+        right: Math.round(element.getBoundingClientRect().right),
+      }))
+      .filter(({ left, right }) => left < 0 || right > viewport)
+      .slice(0, 12)
+    return { viewport, content: document.documentElement.scrollWidth, offenders }
+  })
+  expect(dimensions.content, JSON.stringify(dimensions.offenders)).toBeLessThanOrEqual(dimensions.viewport)
 })
