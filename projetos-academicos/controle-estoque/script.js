@@ -1,39 +1,56 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('form-adicionar');
-    const tabelaEstoque = document.getElementById('tabela-estoque').getElementsByTagName('tbody')[0];
+const STORAGE_KEY = 'portfolio-hub:inventory'
+const form = document.getElementById('form-adicionar')
+const tableBody = document.querySelector('#tabela-estoque tbody')
+const status = document.getElementById('estoque-status')
 
-    // Função para adicionar um produto à tabela
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
+function readProducts() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [] } catch { return [] }
+}
 
-        const nomeProduto = document.getElementById('nome-produto').value;
-        const quantidadeProduto = document.getElementById('quantidade-produto').value;
-        const precoProduto = document.getElementById('preco-produto').value;
+let products = readProducts()
+function save() { localStorage.setItem(STORAGE_KEY, JSON.stringify(products)) }
 
-        if (nomeProduto && quantidadeProduto && precoProduto) {
-            const novaLinha = tabelaEstoque.insertRow();
-            novaLinha.innerHTML = `
-                <td>${nomeProduto}</td>
-                <td>${quantidadeProduto}</td>
-                <td>R$ ${precoProduto}</td>
-                <td><button class="adicionar">Adicionar</button></td>
-                <td><button class="remover">Remover</button></td>
-            `;
+function actionButton(label, className, handler) {
+  const button = document.createElement('button')
+  button.type = 'button'; button.className = className; button.textContent = label
+  button.addEventListener('click', handler)
+  return button
+}
 
-            // Limpar os campos após adicionar
-            form.reset();
+function render() {
+  tableBody.replaceChildren()
+  products.forEach((product) => {
+    const row = tableBody.insertRow()
+    const name = row.insertCell(); const quantity = row.insertCell(); const price = row.insertCell()
+    const add = row.insertCell(); const remove = row.insertCell()
+    name.textContent = product.name
+    quantity.textContent = String(product.quantity)
+    price.textContent = product.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+    add.append(actionButton('+1', 'adicionar', () => updateQuantity(product.id, 1)))
+    remove.append(actionButton(product.quantity ? '-1' : 'Excluir', 'remover', () => product.quantity ? updateQuantity(product.id, -1) : deleteProduct(product.id)))
+  })
+  if (!products.length) status.textContent = 'Nenhum produto cadastrado.'
+}
 
-            // Função para adicionar estoque
-            novaLinha.querySelector('.adicionar').addEventListener('click', () => {
-                novaLinha.cells[1].textContent = parseInt(novaLinha.cells[1].textContent) + 1;
-            });
+function updateQuantity(id, change) {
+  products = products.map((product) => product.id === id ? { ...product, quantity: Math.max(0, product.quantity + change) } : product)
+  save(); render(); status.textContent = 'Estoque atualizado.'
+}
 
-            // Função para remover estoque
-            novaLinha.querySelector('.remover').addEventListener('click', () => {
-                if (parseInt(novaLinha.cells[1].textContent) > 0) {
-                    novaLinha.cells[1].textContent = parseInt(novaLinha.cells[1].textContent) - 1;
-                }
-            });
-        }
-    });
-});
+function deleteProduct(id) {
+  products = products.filter((product) => product.id !== id)
+  save(); render(); status.textContent = 'Produto excluído.'
+}
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault()
+  const name = document.getElementById('nome-produto').value.trim()
+  const quantity = Number(document.getElementById('quantidade-produto').value)
+  const price = Number(document.getElementById('preco-produto').value)
+  if (!name || !Number.isInteger(quantity) || quantity < 0 || !Number.isFinite(price) || price <= 0) {
+    status.textContent = 'Revise nome, quantidade e preço.'; return
+  }
+  products.push({ id: crypto.randomUUID(), name, quantity, price })
+  save(); render(); form.reset(); status.textContent = 'Produto adicionado.'
+})
+render()

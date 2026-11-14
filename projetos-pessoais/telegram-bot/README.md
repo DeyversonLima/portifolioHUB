@@ -1,6 +1,6 @@
 # Telegram Bot
 
-Bot educacional em Python que responde aos comandos `/start` e `/help` e repete mensagens de texto. O projeto usa a API assíncrona do `python-telegram-bot` 20.
+Bot educacional em Python que responde aos comandos `/start` e `/help` e repete mensagens de texto. O projeto usa a API assíncrona do `python-telegram-bot` 22.
 
 ## Executar
 

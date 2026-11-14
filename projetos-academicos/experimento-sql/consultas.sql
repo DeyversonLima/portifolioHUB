@@ -5,7 +5,7 @@ USE SistemaUsuarios;
 SELECT * FROM Usuarios;
 
 -- 2. Consultar um usuário específico pelo email
-SELECT * FROM Usuarios WHERE email = 'maria.oliveira@email.com';
+SELECT id, nome, email, data_criacao FROM Usuarios WHERE email = 'maria.oliveira@example.test';
 
 -- 3. Consultar todos os produtos em estoque (quantidade maior que 0)
 SELECT * FROM Produtos WHERE quantidade_estoque > 0;

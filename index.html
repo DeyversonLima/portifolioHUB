@@ -3,145 +3,129 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Hub de projetos acadêmicos e experimentos de Deyverson Lima.">
-  <title>PortifolioHUB | Projetos de Deyverson Lima</title>
-  <link rel="stylesheet" href="assets/css/hub.css">
+  <meta name="description" content="Portfólio HUB de Deyverson Lima: projetos, formações, certificações e trajetória em Engenharia de Software.">
+  <meta name="author" content="Deyverson Lima">
+  <meta name="theme-color" content="#07110f">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Portfólio HUB | Deyverson Lima">
+  <meta property="og:description" content="Um catálogo verificável de projetos, formações e evolução técnica.">
+  <meta property="og:url" content="https://deyversonlima.github.io/portifolioHUB/">
+  <link rel="canonical" href="https://deyversonlima.github.io/portifolioHUB/">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layouts.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
   <script>
-    document.documentElement.dataset.theme = localStorage.getItem('hub-theme') || 'dark'
+    (() => {
+      const saved = localStorage.getItem('portfolio-hub:theme')
+      const preferred = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+      document.documentElement.dataset.theme = saved || preferred
+    })()
   </script>
+  <title>Portfólio HUB | Deyverson Lima</title>
 </head>
 <body>
-  <a class="skip-link" href="#projetos">Ir para os projetos</a>
-
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="PortifolioHUB, início">
-      <span aria-hidden="true">~/</span>portifolioHUB
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="#inicio" aria-label="Portfólio HUB, início">
+      <span class="brand-mark" aria-hidden="true">DL</span>
+      <span><strong>Portfólio</strong><small>HUB</small></span>
     </a>
-    <nav aria-label="Navegação principal">
-      <a href="#projetos">Projetos</a>
-      <a href="#documentacao">Documentação</a>
-      <a href="https://deyversonlima.github.io">Site pessoal</a>
-      <button id="theme-toggle" class="icon-button" type="button" aria-label="Alternar tema">◐</button>
+    <button class="menu-toggle icon-button" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu" data-menu-toggle>
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav" class="main-nav" aria-label="Navegação principal" data-menu>
+      <a href="#projetos">Projetos</a><a href="#competencias">Competências</a><a href="#formacao">Formação</a><a href="#trajetoria">Trajetória</a><a href="#arquivo">Arquivo</a>
+      <a href="https://deyversonlima.github.io/">Site profissional</a>
+      <button class="icon-button theme-toggle" type="button" aria-label="Usar tema claro" aria-pressed="false" data-theme-toggle><span aria-hidden="true" data-theme-icon>◐</span></button>
     </nav>
   </header>
 
-  <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <div>
-        <p class="eyebrow">Arquivo acadêmico + laboratório pessoal</p>
-        <h1 id="hero-title">Projetos pequenos, aprendizados que ficam.</h1>
-        <p class="hero-copy">Este repositório reúne exercícios, protótipos e documentação produzidos durante minha formação em Engenharia de Software. Cada item preserva o contexto em que foi criado e mostra uma etapa do meu aprendizado.</p>
+  <main id="conteudo">
+    <section id="inicio" class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-copy-block">
+        <p class="eyebrow"><span></span> Engenharia de Software • projetos verificáveis</p>
+        <h1 id="hero-title">Aprendizado convertido em <em>software funcional.</em></h1>
+        <p class="lead">Sou Deyverson Lima. Este hub organiza projetos, estudos e formações que documentam minha evolução em desenvolvimento web, dados, cloud e cibersegurança.</p>
         <div class="hero-actions">
           <a class="button primary" href="#projetos">Explorar projetos</a>
-          <a class="button" href="https://github.com/DeyversonLima/portifolioHUB">Ver repositório</a>
+          <a class="button ghost" href="https://github.com/DeyversonLima">Perfil no GitHub <span aria-hidden="true">↗</span></a>
         </div>
+        <ul class="trust-list" aria-label="Destaques do portfólio">
+          <li><strong data-project-count>12</strong><span>repositórios catalogados</span></li>
+          <li><strong data-cert-count>14</strong><span>formações principais</span></li>
+          <li><strong>4</strong><span>frentes técnicas</span></li>
+        </ul>
       </div>
-      <div class="terminal" role="img" aria-label="Resumo do repositório">
-        <div class="terminal-bar"><span></span><span></span><span></span></div>
-        <pre><code><span class="prompt">$</span> tree --depth 2
-.
-├── projetos-academicos
-│   ├── web
-│   ├── sql
-│   └── modelagem
-├── projetos-pessoais
-│   ├── interfaces
-│   └── automações
-└── documentacao
-
-<span class="ok">status: aprendendo continuamente</span></code></pre>
-      </div>
-    </section>
-
-    <section class="stats" aria-label="Resumo">
-      <div><strong>6</strong><span>projetos indexados</span></div>
-      <div><strong>3</strong><span>áreas: web, dados e automação</span></div>
-      <div><strong>2025–26</strong><span>registro da evolução</span></div>
-    </section>
-
-    <section id="projetos" class="section" aria-labelledby="projects-title">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">Índice do laboratório</p>
-          <h2 id="projects-title">Projetos</h2>
+      <aside class="signal-panel" aria-label="Resumo técnico">
+        <div class="signal-header"><span>portfolio.status</span><span class="live-dot">ATIVO</span></div>
+        <div class="signal-code" aria-hidden="true">
+          <span class="line-number">01</span><span><b>const</b> perfil = {</span>
+          <span class="line-number">02</span><span>&nbsp;&nbsp;foco: <i>'Engenharia de Software'</i>,</span>
+          <span class="line-number">03</span><span>&nbsp;&nbsp;áreas: [<i>'Web'</i>, <i>'Dados'</i>,</span>
+          <span class="line-number">04</span><span>&nbsp;&nbsp;&nbsp;&nbsp;<i>'Cloud'</i>, <i>'Segurança'</i>],</span>
+          <span class="line-number">05</span><span>&nbsp;&nbsp;prática: <b>true</b></span>
+          <span class="line-number">06</span><span>}</span>
         </div>
-        <label class="search">
-          <span>Buscar</span>
-          <input id="project-search" type="search" placeholder="Ex.: JavaScript, SQL..." autocomplete="off">
-        </label>
-      </div>
+        <div class="signal-footer"><span>Brasília, Brasil</span><span>Atualizado em 2026</span></div>
+      </aside>
+    </section>
 
-      <p id="search-status" class="search-status" aria-live="polite"></p>
-      <div class="project-grid" id="project-grid">
-        <article class="project-card" data-search="calculadora javascript html css acadêmico">
-          <div class="card-top"><span class="number">01</span><span class="status ready">Executável</span></div>
-          <h3>Calculadora web</h3>
-          <p>Operações básicas, teclado e parser de expressões sem dependências.</p>
-          <ul class="tags"><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
-          <a href="projetos-academicos/calculadora-web/index.html">Abrir demonstração <span>↗</span></a>
-        </article>
+    <section id="projetos" class="section-shell section-block" aria-labelledby="projects-title">
+      <div class="section-heading"><div><p class="eyebrow"><span></span> Trabalho aplicado</p><h2 id="projects-title">Projetos em evidência</h2></div><p>Produtos, laboratórios e projetos acadêmicos apresentados com contexto, escopo e links verificáveis.</p></div>
+      <div class="featured-grid" data-featured-projects aria-live="polite"></div>
+      <div class="catalog-heading"><div><h3>Catálogo completo</h3><p id="project-status" class="result-status" aria-live="polite"></p></div><button class="text-button" type="button" data-clear-filters>Limpar filtros</button></div>
+      <form class="filters" role="search" aria-label="Filtrar projetos" data-filter-form>
+        <label class="search-field"><span>Buscar</span><input type="search" name="query" placeholder="Projeto, tecnologia ou recurso..." autocomplete="off"></label>
+        <label><span>Área</span><select name="category"><option value="">Todas</option><option value="web">Web</option><option value="dados">Dados</option><option value="cloud">Cloud</option><option value="seguranca">Segurança</option><option value="automacao">Automação</option></select></label>
+        <label><span>Tipo</span><select name="kind"><option value="">Todos</option><option value="pessoal">Pessoal</option><option value="academico">Acadêmico</option><option value="colaborativo">Colaborativo</option></select></label>
+        <label><span>Status</span><select name="status"><option value="">Todos</option><option value="ativo">Ativo</option><option value="concluido">Concluído</option><option value="evolucao">Em evolução</option></select></label>
+        <button class="filter-submit" type="submit">Aplicar filtros</button>
+      </form>
+      <div class="project-grid" data-project-grid></div>
+      <div class="empty-state" data-project-empty hidden><strong>Nenhum projeto encontrado.</strong><span>Altere ou limpe os filtros para ver o catálogo.</span></div>
+    </section>
 
-        <article class="project-card" data-search="todo lista tarefas javascript pessoal">
-          <div class="card-top"><span class="number">02</span><span class="status ready">Executável</span></div>
-          <h3>Todo list</h3>
-          <p>Lista de tarefas para praticar eventos, manipulação do DOM e estado local.</p>
-          <ul class="tags"><li>JavaScript</li><li>DOM</li></ul>
-          <a href="projetos-pessoais/todo-list/index.html">Abrir demonstração <span>↗</span></a>
-        </article>
+    <section id="competencias" class="section-block contrast-section" aria-labelledby="skills-title"><div class="section-shell">
+      <div class="section-heading inverse"><div><p class="eyebrow"><span></span> Base técnica</p><h2 id="skills-title">Competências demonstradas</h2></div><p>As tecnologias abaixo estão relacionadas aos projetos e formações catalogados, não a uma lista genérica de palavras-chave.</p></div>
+      <div class="skills-grid" data-skills-grid></div>
+    </div></section>
 
-        <article class="project-card" data-search="estoque banco dados sql acadêmico">
-          <div class="card-top"><span class="number">03</span><span class="status study">Estudo</span></div>
-          <h3>Controle de estoque</h3>
-          <p>Interface e modelo SQL para explorar cadastro, movimentação e consistência de dados.</p>
-          <ul class="tags"><li>SQL</li><li>JavaScript</li></ul>
-          <a href="projetos-academicos/controle-estoque/index.html">Abrir projeto <span>↗</span></a>
-        </article>
+    <section id="formacao" class="section-shell section-block" aria-labelledby="education-title">
+      <div class="section-heading"><div><p class="eyebrow"><span></span> Aprendizado contínuo</p><h2 id="education-title">Formações e certificações</h2></div><p>Catálogo por instituição e área. Documentos brutos permanecem privados; publicamos somente metadados profissionais.</p></div>
+      <div class="cert-toolbar" role="group" aria-label="Filtrar certificações" data-cert-filters></div>
+      <div class="cert-grid" data-cert-grid></div>
+      <p class="privacy-note"><span aria-hidden="true">◈</span> Privacidade por padrão: certificados completos só serão vinculados quando houver uma URL oficial de validação e nenhuma exposição indevida.</p>
+    </section>
 
-        <article class="project-card" data-search="login autenticação formulário acadêmico">
-          <div class="card-top"><span class="number">04</span><span class="status study">Protótipo</span></div>
-          <h3>Sistema de login</h3>
-          <p>Protótipo de formulário criado para estudar validação e feedback de interface.</p>
-          <ul class="tags"><li>Forms</li><li>UX</li></ul>
-          <a href="projetos-academicos/sistema-login/index.html">Abrir projeto <span>↗</span></a>
-        </article>
+    <section id="trajetoria" class="section-block timeline-section" aria-labelledby="timeline-title"><div class="section-shell">
+      <div class="section-heading"><div><p class="eyebrow"><span></span> Evolução</p><h2 id="timeline-title">Trajetória documentada</h2></div><p>Marcos baseados em entregas e formações registradas neste hub.</p></div>
+      <ol class="timeline" data-timeline></ol>
+    </div></section>
 
-        <article class="project-card" data-search="sql consultas tabelas experimento acadêmico">
-          <div class="card-top"><span class="number">05</span><span class="status code">Código</span></div>
-          <h3>Experimento SQL</h3>
-          <p>Scripts de criação, inserção e consulta para fundamentos de banco relacional.</p>
-          <ul class="tags"><li>SQL</li><li>Dados</li></ul>
-          <a href="projetos-academicos/experimento-sql/consultas.sql">Ler consultas <span>↗</span></a>
-        </article>
-
-        <article class="project-card" data-search="telegram bot python automação pessoal">
-          <div class="card-top"><span class="number">06</span><span class="status code">Código</span></div>
-          <h3>Telegram bot</h3>
-          <p>Experimento de automação em Python documentado para execução com token local.</p>
-          <ul class="tags"><li>Python</li><li>Bot</li></ul>
-          <a href="projetos-pessoais/telegram-bot/README.md">Ler documentação <span>↗</span></a>
-        </article>
+    <section id="arquivo" class="section-shell section-block" aria-labelledby="archive-title">
+      <div class="section-heading"><div><p class="eyebrow"><span></span> Histórico de aprendizado</p><h2 id="archive-title">Arquivo acadêmico</h2></div><p>Exercícios preservados como evidência de evolução, sem serem apresentados como produtos de produção.</p></div>
+      <div class="archive-grid" data-archive-grid></div>
+      <div class="document-links">
+        <a href="documentacao/guia-git-basico.md"><span>Guia básico de Git</span><small>Documento de estudo</small></a>
+        <a href="documentacao/relatorio-engenharia-software.pdf"><span>Relatório de Engenharia de Software</span><small>Trabalho acadêmico histórico</small></a>
+        <a href="documentacao/roadmap.md"><span>Roadmap do Portfólio HUB</span><small>Planejamento atualizado</small></a>
       </div>
     </section>
 
-    <section id="documentacao" class="section documentation" aria-labelledby="docs-title">
-      <div>
-        <p class="eyebrow">Além do código</p>
-        <h2 id="docs-title">Documentação e processo</h2>
-        <p>O hub também guarda cronogramas, relatórios e um guia introdutório de Git. Esses registros ajudam a mostrar não só o resultado, mas como o trabalho foi organizado.</p>
-      </div>
-      <div class="doc-links">
-        <a href="documentacao/README.md"><span>README da documentação</span><strong>01</strong></a>
-        <a href="documentacao/guia-git-basico.md"><span>Guia básico de Git</span><strong>02</strong></a>
-        <a href="documentacao/ideias-futuras.md"><span>Ideias futuras</span><strong>03</strong></a>
-      </div>
-    </section>
+    <section class="cta-section section-shell" aria-labelledby="cta-title"><p class="eyebrow"><span></span> Continuar explorando</p><h2 id="cta-title">Código, contexto e evolução em um só lugar.</h2><div class="hero-actions"><a class="button primary" href="https://github.com/DeyversonLima">Abrir GitHub</a><a class="button ghost" href="https://deyversonlima.github.io/">Conhecer perfil profissional</a></div></section>
   </main>
 
-  <footer>
-    <p>Um arquivo vivo de estudos de <a href="https://github.com/DeyversonLima">Deyverson Lima</a>.</p>
-    <a href="#top">Voltar ao topo ↑</a>
-  </footer>
-
-  <script src="assets/js/hub.js"></script>
+  <footer class="site-footer"><div class="section-shell footer-grid">
+    <div><a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true">DL</span><span><strong>Portfólio</strong><small>HUB</small></span></a><p>Arquivo vivo de projetos, estudos e formação de Deyverson Lima.</p></div>
+    <nav aria-label="Links do rodapé"><a href="#projetos">Projetos</a><a href="#formacao">Formação</a><a href="README.md">Documentação</a><a href="SECURITY.md">Segurança</a></nav>
+    <div class="footer-meta"><span>Versão 1.0.0</span><span>© <span data-current-year></span> Deyverson Lima</span><a href="#inicio">Voltar ao topo ↑</a></div>
+  </div></footer>
+  <noscript><div class="noscript">Ative o JavaScript para carregar o catálogo pesquisável. Os repositórios continuam disponíveis no <a href="https://github.com/DeyversonLima">GitHub</a>.</div></noscript>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Deyverson Lima","url":"https://deyversonlima.github.io/","sameAs":["https://github.com/DeyversonLima"],"knowsAbout":["Engenharia de Software","Desenvolvimento Web","Dados","Cloud","Cibersegurança"]}</script>
+  <script type="module" src="assets/js/app.js"></script>
 </body>
 </html>

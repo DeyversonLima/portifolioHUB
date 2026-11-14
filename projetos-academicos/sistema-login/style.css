@@ -21,6 +21,12 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 300px;
 }
+.login-container > p { color: #59645f; font-size: 14px; line-height: 1.5; }
+.demo-badge { color: #176b45 !important; font-size: 11px !important; font-weight: 800; letter-spacing: .1em; }
+.message { margin-top: 15px; padding: 10px; border-radius: 4px; }
+.message.error { background: #fdeaea; color: #8d2020; }
+.message.success { background: #e8f6ee; color: #176b45; }
+button:focus-visible, input:focus-visible { outline: 3px solid #176b45; outline-offset: 2px; }
 
 h2 {
     text-align: center;

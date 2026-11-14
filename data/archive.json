@@ -1,0 +1,9 @@
+[
+  {"title":"Calculadora Web","description":"Parser restrito para operações aritméticas e suporte a teclado.","technologies":["JavaScript","HTML","CSS"],"url":"projetos-academicos/calculadora-web/index.html","status":"Demonstração"},
+  {"title":"Todo List","description":"Lista de tarefas local para estudo de DOM, eventos e persistência.","technologies":["JavaScript","LocalStorage"],"url":"projetos-pessoais/todo-list/index.html","status":"Demonstração"},
+  {"title":"Controle de Estoque","description":"CRUD demonstrativo e modelo SQL para fundamentos de estoque.","technologies":["JavaScript","SQL"],"url":"projetos-academicos/controle-estoque/index.html","status":"Estudo"},
+  {"title":"Validação de Login","description":"Simulação visual para estudar formulários e feedback, sem autenticação real.","technologies":["Forms","UX"],"url":"projetos-academicos/sistema-login/index.html","status":"Simulação"},
+  {"title":"Experimento SQL","description":"Criação, inserção e consultas relacionais com dados fictícios.","technologies":["SQL","MySQL"],"url":"projetos-academicos/experimento-sql/consultas.sql","status":"Código"},
+  {"title":"Telegram Bot","description":"Bot educacional com comandos e respostas de texto, configurado por variável de ambiente.","technologies":["Python","Telegram API"],"url":"projetos-pessoais/telegram-bot/README.md","status":"Código"},
+  {"title":"Portfólio Histórico","description":"Primeira versão do portfólio, preservada para demonstrar evolução visual.","technologies":["HTML","CSS"],"url":"projetos-pessoais/site-portifolio/index.html","status":"Histórico"}
+]

@@ -1,0 +1,16 @@
+[
+  {"id":"ceub-agile","title":"Assistente de Projetos Ágeis de Sistemas","issuer":"CEUB","category":"engenharia","year":2025,"level":"Formação"},
+  {"id":"santander-cyber","title":"Santander - Cibersegurança do Zero à Prática","issuer":"Santander Academy / DIO","category":"seguranca","year":2026,"level":"Formação"},
+  {"id":"dio-cyber-foundations","title":"Fundamentos de Cibersegurança","issuer":"DIO","category":"seguranca","year":2026,"level":"Módulo"},
+  {"id":"dio-linux","title":"O Essencial sobre Linux e Máquinas Virtuais","issuer":"DIO","category":"infraestrutura","year":2026,"level":"Módulo"},
+  {"id":"dio-pentest","title":"Pentest e Análise de Vulnerabilidades","issuer":"DIO","category":"seguranca","year":2026,"level":"Módulo"},
+  {"id":"dio-defense","title":"Análise e Proteção contra Ataques Cibernéticos","issuer":"DIO","category":"seguranca","year":2026,"level":"Módulo"},
+  {"id":"dio-ai-agents","title":"Inteligência Artificial e Agentes","issuer":"DIO","category":"ia","year":2026,"level":"Módulo"},
+  {"id":"bradesco-database","title":"Banco de Dados","issuer":"Fundação Bradesco","category":"dados","year":2026,"level":"Curso"},
+  {"id":"enap-python","title":"Aprendendo com Python","issuer":"ENAP","category":"desenvolvimento","year":2026,"level":"Curso"},
+  {"id":"enap-excel","title":"Excel Avançado","issuer":"ENAP","category":"dados","year":2026,"level":"Curso"},
+  {"id":"enap-devops","title":"O Papel do DevOps na Transformação Digital","issuer":"ENAP","category":"cloud","year":2026,"level":"Curso"},
+  {"id":"enap-power-bi","title":"Aplicação do Power BI para Aprimoramento da Gestão","issuer":"ENAP","category":"dados","year":2026,"level":"Curso"},
+  {"id":"skilled-it","title":"Informática na Prática","issuer":"Skill.Ed","category":"infraestrutura","year":2025,"level":"Curso"},
+  {"id":"skilled-games","title":"Programação e Desenvolvimento de Games","issuer":"Skill.Ed","category":"desenvolvimento","year":2025,"level":"Curso"}
+]

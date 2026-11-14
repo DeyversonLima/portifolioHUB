@@ -1,0 +1,6 @@
+[
+  {"title":"Desenvolvimento Web","description":"Interfaces responsivas, estado local, APIs e experiências completas de navegação.","items":["JavaScript","React","PHP","HTML semântico","CSS responsivo"]},
+  {"title":"Dados e persistência","description":"Modelagem, consultas, integração e persistência local ou gerenciada.","items":["SQL","MySQL","SQLite","Supabase","Power BI"]},
+  {"title":"Cloud e qualidade","description":"Entrega automatizada, testes, documentação e ambientes reproduzíveis.","items":["AWS","Docker","GitHub Actions","Pytest","CI/CD"]},
+  {"title":"Cibersegurança","description":"Laboratórios autorizados, análise de vulnerabilidades e práticas defensivas.","items":["Linux","Nmap","Pentest","Criptografia","Mitigação"]}
+]

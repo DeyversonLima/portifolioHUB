@@ -8,7 +8,9 @@
 </head>
 <body>
     <div class="login-container">
-        <h2>Login</h2>
+        <p class="demo-badge">SIMULAÇÃO EDUCACIONAL</p>
+        <h2>Validação de formulário</h2>
+        <p>Este exemplo demonstra feedback de interface. Não realiza autenticação real nem envia dados.</p>
         <form id="loginForm">
             <div class="input-container">
                 <label for="username">Usuário:</label>
@@ -16,11 +18,11 @@
             </div>
             <div class="input-container">
                 <label for="password">Senha:</label>
-                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" autocomplete="current-password" required>
             </div>
             <button type="submit" class="btn">Entrar</button>
         </form>
-        <p id="error-message" style="color: red; display: none;">Usuário ou senha incorretos</p>
+        <p id="form-message" aria-live="polite"></p>
     </div>
 
     <script src="login.js"></script>

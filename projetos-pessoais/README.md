@@ -12,7 +12,7 @@ Primeira versão estática do portfólio, preservada para comparação com a ver
 
 ## Todo list
 
-Lista de tarefas com adição, remoção, teclado e persistência em `localStorage`.
+Lista de tarefas com adição, edição, conclusão, filtros, teclado e persistência em `localStorage`.
 
 - Tecnologias: HTML, CSS e JavaScript
 - [Abrir demonstração](todo-list/index.html)

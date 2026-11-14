@@ -27,11 +27,13 @@
 
         <h2>Adicionar Produto</h2>
         <form id="form-adicionar">
-            <input type="text" id="nome-produto" placeholder="Nome do Produto" required>
-            <input type="number" id="quantidade-produto" placeholder="Quantidade" required>
-            <input type="number" id="preco-produto" placeholder="Preço" required>
+            <label>Produto <input type="text" id="nome-produto" maxlength="80" required></label>
+            <label>Quantidade <input type="number" id="quantidade-produto" min="0" step="1" required></label>
+            <label>Preço <input type="number" id="preco-produto" min="0.01" step="0.01" required></label>
             <button type="submit">Adicionar Produto</button>
         </form>
+        <p id="estoque-status" aria-live="polite"></p>
+        <p class="scope-note">Demonstração local: os dados ficam somente neste navegador e não estão conectados ao arquivo SQL.</p>
     </div>
 
     <script src="script.js"></script>

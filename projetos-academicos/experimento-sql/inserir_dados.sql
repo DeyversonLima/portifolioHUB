@@ -1,12 +1,13 @@
 -- inserir_dados.sql
 USE SistemaUsuarios;
 
--- Inserindo dados na tabela de usuários
-INSERT INTO Usuarios (nome, email, senha) 
+-- Hashes abaixo são fictícios e servem somente para demonstrar o formato.
+-- Em uma aplicação real, use Argon2id ou bcrypt no backend.
+INSERT INTO Usuarios (nome, email, senha_hash)
 VALUES
-    ('João Silva', 'joao.silva@email.com', 'senha123'),
-    ('Maria Oliveira', 'maria.oliveira@email.com', 'senha456'),
-    ('Carlos Souza', 'carlos.souza@email.com', 'senha789');
+    ('João Silva', 'joao.silva@example.test', '$argon2id$exemplo$hash-ficticio-01'),
+    ('Maria Oliveira', 'maria.oliveira@example.test', '$argon2id$exemplo$hash-ficticio-02'),
+    ('Carlos Souza', 'carlos.souza@example.test', '$argon2id$exemplo$hash-ficticio-03');
 
 -- Inserindo dados na tabela de produtos
 INSERT INTO Produtos (nome, descricao, preco, quantidade_estoque) 

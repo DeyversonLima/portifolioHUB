@@ -26,6 +26,9 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_text = update.effective_message.text
     await update.effective_message.reply_text(f"Você disse: {user_text}")
 
+async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE):
+    logger.error("Falha ao processar uma atualização do Telegram.", exc_info=context.error)
+
 # Função principal que configura o bot
 def main():
     token = os.getenv("TELEGRAM_BOT_TOKEN")
@@ -36,6 +39,7 @@ def main():
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("help", help_command))
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, echo))
+    application.add_error_handler(error_handler)
 
     logger.info("Bot iniciado. Pressione Ctrl+C para encerrar.")
     application.run_polling(allowed_updates=Update.ALL_TYPES)

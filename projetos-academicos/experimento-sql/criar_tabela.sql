@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS Usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
-    senha VARCHAR(100) NOT NULL,
+    senha_hash VARCHAR(255) NOT NULL COMMENT 'Hash gerado no backend; nunca armazene a senha original',
     data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 

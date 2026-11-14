@@ -35,9 +35,16 @@ section {
     margin: 20px;
 }
 
-#sobre img {
-    max-width: 200px;
+.profile-placeholder {
+    display: grid;
+    width: 160px;
+    aspect-ratio: 1;
+    place-items: center;
     border-radius: 50%;
+    background: #333;
+    color: white;
+    font-size: 42px;
+    font-weight: bold;
 }
 
 .projeto {
