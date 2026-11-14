@@ -34,5 +34,6 @@ jobs:
       - name: Verificar dados sensíveis conhecidos
         shell: bash
         run: |
-          ! grep -RInE '(TELEGRAM_BOT_TOKEN|api[_-]?key|secret)[[:space:]]*=[[:space:]]*["'"'][^$]' \
+          ! grep -RInE '(TELEGRAM_BOT_TOKEN|api[_-]?key|secret)[[:space:]]*=[[:space:]]*[^$[:space:]]' \
+            --include='*.js' --include='*.mjs' --include='*.py' \
             --exclude-dir=.git --exclude-dir=node_modules .
